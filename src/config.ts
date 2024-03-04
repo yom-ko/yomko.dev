@@ -1,13 +1,13 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
-  author: "Sat Naing",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
+  website: "https://yomko.dev",
+  author: "Artyom Bondarenko",
+  desc: "Developer resume, portfolio, and blog",
+  title: "Personal Blog",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 
@@ -25,34 +25,22 @@ export const LOGO_IMAGE = {
 
 export const SOCIALS: SocialObjects = [
   {
-    name: "Github",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: ` ${SITE.title} on Github`,
-    active: true,
-  },
-  {
-    name: "Facebook",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Facebook`,
-    active: true,
-  },
-  {
-    name: "Instagram",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Instagram`,
-    active: true,
-  },
-  {
     name: "LinkedIn",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://www.linkedin.com/in/artyom-bondarenko",
     linkTitle: `${SITE.title} on LinkedIn`,
     active: true,
   },
   {
+    name: "Github",
+    href: "https://github.com/yom-ko",
+    linkTitle: ` ${SITE.title} on Github`,
+    active: true,
+  },
+  {
     name: "Mail",
-    href: "mailto:yourmail@gmail.com",
+    href: "mailto:artem.getcode@gmail.com",
     linkTitle: `Send an email to ${SITE.title}`,
-    active: false,
+    active: true,
   },
   {
     name: "Twitter",
@@ -61,15 +49,27 @@ export const SOCIALS: SocialObjects = [
     active: false,
   },
   {
-    name: "Twitch",
+    name: "Instagram",
     href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Twitch`,
+    linkTitle: `${SITE.title} on Instagram`,
+    active: false,
+  },
+  {
+    name: "Facebook",
+    href: "https://github.com/satnaing/astro-paper",
+    linkTitle: `${SITE.title} on Facebook`,
     active: false,
   },
   {
     name: "YouTube",
     href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on YouTube`,
+    active: false,
+  },
+  {
+    name: "Twitch",
+    href: "https://github.com/satnaing/astro-paper",
+    linkTitle: `${SITE.title} on Twitch`,
     active: false,
   },
   {
