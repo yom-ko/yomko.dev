@@ -3,8 +3,8 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://yomko.dev",
   author: "Artyom Bondarenko",
-  desc: "Developer resume, portfolio, and blog",
-  title: "Personal Blog",
+  desc: "My notes and thoughts on software development, engineering, computer science, and stuff.",
+  title: "Yomko.Dev",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 5,
@@ -31,16 +31,16 @@ export const SOCIALS: SocialObjects = [
     active: true,
   },
   {
-    name: "Github",
-    href: "https://github.com/yom-ko",
-    linkTitle: ` ${SITE.title} on Github`,
-    active: true,
-  },
-  {
     name: "Mail",
     href: "mailto:artem.getcode@gmail.com",
     linkTitle: `Send an email to ${SITE.title}`,
     active: true,
+  },
+  {
+    name: "Github",
+    href: "https://github.com/yom-ko",
+    linkTitle: ` ${SITE.title} on Github`,
+    active: false,
   },
   {
     name: "Twitter",
