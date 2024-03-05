@@ -2,6 +2,7 @@
 import { LOCALE, SITE } from "@config";
 import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
+import { GoogleAnalytics } from "astro-analytics";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -104,6 +105,9 @@ const socialImageURL = new URL(
         />
       )
     }
+
+    <!-- Google Analytics -->
+    <GoogleAnalytics id="G-T2TWLLR1K3" />
 
     <ViewTransitions />
 
