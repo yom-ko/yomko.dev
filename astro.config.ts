@@ -6,10 +6,14 @@ import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 import partytown from "@astrojs/partytown";
+import netlify from "@astrojs/netlify";
+import markdoc from "@astrojs/markdoc";
+import keystatic from "@keystatic/astro";
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
+
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -21,7 +25,10 @@ export default defineConfig({
         forward: ["dataLayer.push"],
       },
     }),
+    markdoc(),
+    keystatic(),
   ],
+
   markdown: {
     remarkPlugins: [
       remarkToc,
@@ -37,10 +44,13 @@ export default defineConfig({
       wrap: true,
     },
   },
+
   vite: {
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
   },
+
   scopedStyleStrategy: "where",
+  adapter: netlify(),
 });
