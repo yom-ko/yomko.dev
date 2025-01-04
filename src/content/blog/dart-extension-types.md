@@ -6,7 +6,7 @@ featured: false
 tags:
   - Dart
 pubDatetime: 2024-03-22T15:05:00.000Z
-modDatetime: 2024-12-05T15:05:00.000Z
+modDatetime: 2025-01-04T23:50:00.000Z
 author: Artyom Bondarenko
 ---
 **Hi!**
