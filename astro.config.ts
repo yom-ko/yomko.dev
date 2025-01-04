@@ -48,7 +48,6 @@ export default defineConfig({
   },
 
   vite: {
-    define: { "process.env": process.env },
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
