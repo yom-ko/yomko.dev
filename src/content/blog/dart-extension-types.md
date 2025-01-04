@@ -12,10 +12,9 @@ pubDatetime: 2024-03-22T15:05:00.000Z
 modDatetime: 2024-12-05T15:05:00.000Z
 author: Artyom Bondarenko
 ---
-
 **Hi!**
 
-This is how they look...
+This is how they look
 
 ```dart
 void main() {
