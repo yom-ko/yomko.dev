@@ -36,3 +36,6 @@ extension type E(int i) {
 Extension types are similar to extension methods, but they are much more powerful!
 
 First of all, an extension type is a static type.
+
+
+
