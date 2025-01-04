@@ -1,9 +1,6 @@
 ---
 title: Extension Types in Dart
-description: >-
-  Review of the Flutter's built-in state management mechanisms and approaches.
-  This is the first post of the series dedicated to state management in Flutter
-  apps.
+description: Review of the Extension Types in Dart.
 draft: false
 featured: false
 tags:
