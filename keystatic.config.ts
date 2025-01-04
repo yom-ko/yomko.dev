@@ -5,10 +5,7 @@ export default config({
   storage: {
     // kind: 'local',
     kind: 'github',
-    repo: {
-      owner: 'yom-ko',
-      name: 'yomko.dev',
-    }
+    repo: 'yom-ko/yomko.dev',
   },
 
   collections: {
@@ -17,16 +14,21 @@ export default config({
       slugField: 'slug',
       path: 'src/content/blog/*',
       format: { contentField: 'content' },
+      entryLayout: 'content',
       schema: {
         title: fields.text({ label: 'Title' }),
         slug: fields.text({ label: 'Slug' }),
-        author: fields.text({ label: 'Author', defaultValue: 'Artyom Bondarenko', validation: { isRequired: false } }),
         description: fields.text({ label: 'Description' }),
+        content: fields.mdx({
+          label: 'Content',
+          extension: 'md',
+        }),
         draft: fields.checkbox({ label: 'Draft' }),
         featured: fields.checkbox({ label: 'Featured' }),
         tags: fields.array(fields.text({ label: 'Tag' }), { label: 'Tags' }),
         pubDatetime: fields.datetime({ label: 'Publication date' }),
         modDatetime: fields.datetime({ label: 'Modification date' }),
+        author: fields.text({ label: 'Author', defaultValue: 'Artyom Bondarenko', validation: { isRequired: false } }),
         // canonicalURL: fields.url({ label: 'Canonical URL' }),
         // tags: fields.multiselect({ label: 'Tags' }),
         // ogImage: image()
@@ -35,9 +37,6 @@ export default config({
         //   })
         //   .or(z.string())
         //   .optional(),
-        content: fields.markdoc({
-          label: 'Content',
-        }),
       },
     }),
   },
