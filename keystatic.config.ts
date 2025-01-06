@@ -1,9 +1,9 @@
 import { config, fields, collection } from '@keystatic/core';
 
-const isProduction = process.env.NODE_ENV === 'production';
+const isRemote = import.meta.env.PUBLIC_IS_REMOTE_ENVIRONMENT === 'true';
 
 export default config({
-  storage: isProduction ? {
+  storage: isRemote ? {
     kind: 'github',
     repo: 'yom-ko/yomko.dev',
   } : { kind: 'local' },
