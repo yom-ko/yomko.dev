@@ -14,8 +14,6 @@ import keystatic from "@keystatic/astro";
 export default defineConfig({
   site: SITE.website,
 
-  adapter: netlify(),
-
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -62,4 +60,6 @@ export default defineConfig({
   },
 
   scopedStyleStrategy: "where",
+
+  adapter: netlify(),
 });
