@@ -1,5 +1,4 @@
 import { config, fields, collection } from '@keystatic/core';
-import { slug } from 'github-slugger';
 
 export default config({
   storage: {
@@ -14,14 +13,20 @@ export default config({
       path: 'src/content/blog/*',
       format: { contentField: 'content' },
       entryLayout: 'content',
-      slugField: 'slug',
+      slugField: 'title',
       schema: {
-        title: fields.text({ label: 'Title' }),
-        slug: fields.text({ label: 'Slug' }),
-        description: fields.text({ label: 'Description' }),
         content: fields.mdx({
           label: 'Content',
           extension: 'md',
+        }),
+        title: fields.slug({
+          name: { label: 'Title', validation: { isRequired: true } },
+          slug: { label: 'Slug' },
+        }),
+        description: fields.text({
+          label: 'Description',
+          multiline: true,
+          validation: { length: { min: 30, max: 160 } },
         }),
         tags: fields.array(
           fields.text({ label: 'Tag' }),
@@ -34,14 +39,6 @@ export default config({
         pubDatetime: fields.datetime({ label: 'Publication date' }),
         modDatetime: fields.datetime({ label: 'Modification date' }),
         author: fields.text({ label: 'Author', defaultValue: 'Artyom Bondarenko' }),
-        // canonicalURL: fields.url({ label: 'Canonical URL' }),
-        // ogImage: image()
-        //   .refine(img => img.width >= 1200 && img.height >= 630, {
-        //     message: "OpenGraph image must be at least 1200 X 630 pixels!",
-        //   })
-        //   .or(z.string())
-        //   .optional(),
-        
       },
     }),
   },
