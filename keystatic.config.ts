@@ -21,13 +21,25 @@ export default config({
         }),
         title: fields.slug({
           name: { label: 'Title', validation: { isRequired: true } },
-          slug: { label: 'Slug' },
         }),
         description: fields.text({
           label: 'Description',
           multiline: true,
           validation: { length: { min: 30, max: 160 } },
         }),
+        // thumbnail: fields.image({
+        //   label: 'Thumbnail',
+        //   directory: 'public/images',
+        //   publicPath: '/images',
+        // }),
+        // language: fields.select({
+        //   label: 'Language',
+        //   defaultValue: 'en',
+        //   options: [
+        //     { label: 'English', value: 'en', },
+        //     { label: 'Russian', value: 'ru', }
+        //   ]
+        // }),
         tags: fields.array(
           fields.text({ label: 'Tag' }),
           {
@@ -36,8 +48,8 @@ export default config({
           }),
         draft: fields.checkbox({ label: 'Draft' }),
         featured: fields.checkbox({ label: 'Featured' }),
-        pubDatetime: fields.datetime({ label: 'Publication date' }),
-        modDatetime: fields.datetime({ label: 'Modification date' }),
+        pubDatetime: fields.datetime({ label: 'Publication Date' }),
+        modDatetime: fields.datetime({ label: 'Modification Date' }),
         author: fields.text({ label: 'Author', defaultValue: 'Artyom Bondarenko' }),
       },
     }),
