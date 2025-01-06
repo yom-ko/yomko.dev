@@ -1,6 +1,6 @@
 ---
 title: Extension Types in Dart
-description: Review of the Extension Types in Dart.
+description: Review of the Extension Types in Dart
 tags:
   - Dart
 draft: false
