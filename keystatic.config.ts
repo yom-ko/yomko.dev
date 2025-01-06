@@ -1,12 +1,12 @@
 import { config, fields, collection } from '@keystatic/core';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 export default config({
-  storage: {
-    // kind: 'local',
+  storage: isProduction ? {
     kind: 'github',
     repo: 'yom-ko/yomko.dev',
-  },
-
+  } : { kind: 'local' },
   collections: {
     blog: collection({
       label: 'Blog',
