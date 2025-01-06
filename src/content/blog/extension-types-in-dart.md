@@ -28,6 +28,12 @@ extension type E(int i) {
   E.n(this.i);
   E.m(int j, String foo) : i = j + foo.length;
 }
+
+// OUTPUT:
+// 4
+// 3
+// 11
+
 ```
 
 Extension types are similar to extension methods, but they are much more powerful!
