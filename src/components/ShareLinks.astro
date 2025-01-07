@@ -6,9 +6,9 @@ const URL = Astro.url;
 
 const shareLinks = [
   {
-    name: "WhatsApp",
-    href: "https://wa.me/?text=",
-    linkTitle: `Share this post via WhatsApp`,
+    name: "Mail",
+    href: "mailto:?subject=See%20this%20post&body=",
+    linkTitle: `Share this post via email`,
   },
   {
     name: "Facebook",
@@ -21,14 +21,14 @@ const shareLinks = [
     linkTitle: `Tweet this post`,
   },
   {
+    name: "WhatsApp",
+    href: "https://wa.me/?text=",
+    linkTitle: `Share this post via WhatsApp`,
+  },
+  {
     name: "Telegram",
     href: "https://t.me/share/url?url=",
     linkTitle: `Share this post via Telegram`,
-  },
-  {
-    name: "Mail",
-    href: "mailto:?subject=See%20this%20post&body=",
-    linkTitle: `Share this post via email`,
   },
 ] as const;
 ---
