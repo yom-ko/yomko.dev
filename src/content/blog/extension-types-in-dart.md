@@ -12,7 +12,7 @@ author: Artyom Bondarenko
 
 **Hi!**
 
-This is how they look:
+This is how they look
 
 ```dart
 void main() {
