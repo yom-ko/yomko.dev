@@ -58,6 +58,14 @@ window.onload = () => {
     document.querySelector("#theme-btn")?.addEventListener("click", () => {
       themeValue = themeValue === "light" ? "dark" : "light";
       setPreference();
+
+      // change the comments theme accordingly
+      const iframe = document.querySelector("iframe.giscus-frame");
+      if (!iframe) return;
+      iframe.contentWindow.postMessage(
+        { giscus: { setConfig: { theme: themeValue } } },
+        "https://giscus.app"
+      );
     });
   }
 
