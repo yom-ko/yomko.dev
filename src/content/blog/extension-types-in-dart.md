@@ -3,12 +3,14 @@ title: Extension Types in Dart
 description: Review of the Extension Types in Dart
 tags:
   - Dart
+  - Language
 draft: false
 featured: false
 pubDatetime: 2024-03-22T15:05:00.000Z
 modDatetime: 2025-01-04T23:50:00.000Z
 author: Artyom Bondarenko
 ---
+
 **Hi!**
 
 This is how they look:
