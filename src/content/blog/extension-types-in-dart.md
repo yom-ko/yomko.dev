@@ -40,4 +40,45 @@ extension type E(int i) {
 
 Extension types are similar to extension methods, but they are much more powerful!
 
-First of all, an extension type is a static type.
+```dart
+void main() {
+  final objE = E();
+
+  print(objE.runtimeType);
+
+  if (objE is int) print(objE.it);
+
+  if (objE case int x) print(x.toRadixString(10));
+
+  switch (objE) {
+    case int(:final isEven):
+      print('$objE (${isEven ? 'even' : 'odd'})');
+  }
+
+  final objEn = const E._(2);
+  final objEm = E.otherName(3);
+
+  print(objEn);
+  print(objEm);
+}
+
+extension type const E._(int it) {
+  E() : this._(42);
+  E.otherName(this.it);
+}
+
+// OUTPUT:
+// int
+// 42
+// 42
+// 42 (even)
+// 2
+// 3
+```
+
+```dart
+
+extension type E._(int i) {
+  E.fromString(String foo) : i = int.parse(foo);
+}
+```
