@@ -38,8 +38,6 @@ extension type E(int i) {
 
 ```
 
-Extension types are similar to extension methods, but they are much more powerful!
-
 ```dart
 void main() {
   final objE = E();
